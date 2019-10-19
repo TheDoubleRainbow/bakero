@@ -28,6 +28,7 @@
             </div>
         </div>
         <div class="game__answer">
+            <app-answer-marker-stats [stats]="markerStats"></app-answer-marker-stats>
             <div class="game__block block">
                 <div class="block__title">
                     Map to answer
@@ -36,7 +37,7 @@
                     <app-answer-map (onMapClick)="onAnsverMapClick($event)"></app-answer-map>
                 </div>
             </div>
-            <app-answer-button></app-answer-button>
+            <app-answer-button [disabled]="answerDisabled"></app-answer-button>
         </div>
     </div>
 </div>

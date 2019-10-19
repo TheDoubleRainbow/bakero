@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { OpenWeatherService } from '../open-weather.service';
 
 @Component({
@@ -18,14 +18,23 @@ export class GameComponent implements OnInit {
 
   public markerStats = {}
 
+  public answerDisabled = true;
+
   onAnsverMapClick(point: {lng: number, lat: number}) {
     this.dataService.getDataByGeopoint(point.lng, point.lat).subscribe( data => {
       this.markerStats = {
+        display: true,
         temp: data.main.temp,
         pressure: data.main.pressure,
         humidity: data.main.humidity,
       }
+
+      this.markerSelected()
     })
+  }
+
+  markerSelected() {
+    this.answerDisabled = false;
   }
 
   ngOnInit() {
