@@ -65,8 +65,8 @@ export class OpenWeatherService {
         // console.log(data);
         return { ...data[0], elevation: data[1]['results'][0].elevation };
       }
-      ))
-    // as Observable<WeatherData>;
+      )) as Observable<WeatherData>;
+
     // this.http.get("https://maps.googleapis.com/maps/api/elevation/json?locations=${lat},&key=${this.googleKey}");
   }
 }

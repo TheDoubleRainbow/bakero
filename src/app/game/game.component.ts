@@ -13,7 +13,8 @@ export class GameComponent implements OnInit {
   public stats = {
     temp: 23,
     pressure: 10.21,
-    humidity: 20
+    humidity: 20,
+    elevation: 1200,
   }
 
   public markerStats = {}
@@ -27,6 +28,7 @@ export class GameComponent implements OnInit {
         temp: data.main.temp,
         pressure: data.main.pressure,
         humidity: data.main.humidity,
+        elevation: data.elevation.toFixed(1),
       }
 
       this.markerSelected()
