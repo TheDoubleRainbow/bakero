@@ -13,6 +13,7 @@ import { QuestionImageComponent } from './question-image/question-image.componen
 import { QuestionStatsComponent } from './question-stats/question-stats.component';
 import { FormBuilder } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     QuestionMapComponent,
     QuestionImageComponent,
     QuestionStatsComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

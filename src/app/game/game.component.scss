@@ -1,0 +1,22 @@
+.game {
+    color: white;
+    background-color: #1F1F1F;
+    min-height: 100vh;
+}
+
+.game-container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.block {
+    &__content {
+        min-width: 300px;
+        background-color: #373737;
+        border-radius: 5px;
+        margin: 10px 0 15px 0;
+    }
+}

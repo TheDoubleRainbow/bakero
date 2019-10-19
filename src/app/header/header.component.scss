@@ -1,0 +1,32 @@
+.header {
+    background-color: #373737;
+    height: 56px;
+    width: 100%;
+    color: white;
+
+    &__logo {
+        height: 40px;
+        margin-top: 8px;
+    }
+
+    &__user-data {
+        padding-top: 17px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__score-wrap {
+        margin: 0 50px;
+    }
+
+    &__score-label {
+        color: #BFBFBF;
+    }
+}
+
+.header-container {
+    max-width: 1170px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}

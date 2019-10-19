@@ -1,13 +1,41 @@
 <div class="game">
-    <div class="game__name">
-        ばけろ
-    </div>
-    <div class="game__top">
-        <app-answer-map></app-answer-map>
-    </div>
-    <div class="game__bottom">
-        <app-question-image></app-question-image>
-        <app-question-map></app-question-map>
-        <app-question-stats></app-question-stats>
+    <app-header></app-header>
+    <div class="game-container">
+        <div class="game__question">
+            <div class="game__block block">
+                <div class="block__title">
+                    Surface photo
+                </div>
+                <div class="block__content">
+                    <app-question-image img="./../../assets/img/places/Mount_Fuji.jpg"></app-question-image>
+                </div>
+            </div>
+            <div class="game__block block">
+                <div class="block__title">
+                    Satellite photo
+                </div>
+                <div class="block__content">
+                    <app-question-map></app-question-map>
+                </div>
+            </div>
+            <div class="game__block block">
+                <div class="block__title">
+                    Stats
+                </div>
+                <div class="block__content">
+                    <app-question-stats></app-question-stats>
+                </div>
+            </div>
+        </div>
+        <div class="game__answer">
+            <div class="game__block block">
+                <div class="block__title">
+                    Map to answer
+                </div>
+                <div class="block__content">
+                    <app-answer-map></app-answer-map>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

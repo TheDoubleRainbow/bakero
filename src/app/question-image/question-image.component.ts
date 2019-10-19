@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { __importDefault } from 'tslib';
 
 @Component({
   selector: 'app-question-image',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./question-image.component.scss']
 })
 export class QuestionImageComponent implements OnInit {
+
+  @Input()
+  img: string
 
   constructor() { }
 

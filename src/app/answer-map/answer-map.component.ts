@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-answer-map',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnswerMapComponent implements OnInit {
 
-  public mapData = {
+  @Input()
+  mapData = {
     title: 'Answer map',
     lat: 51.678418,
     lng: 7.809007

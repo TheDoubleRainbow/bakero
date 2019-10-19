@@ -9,7 +9,7 @@ export class GameService {
   constructor(private router: Router) {}
 
   private user = {
-    name: '',
+    name: 'Username',
   }
 
   private gameStarted = false;

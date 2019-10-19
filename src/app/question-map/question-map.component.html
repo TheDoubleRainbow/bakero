@@ -1,1 +1,13 @@
-<p>question-map works!</p>
+<agm-map    [disableDoubleClickZoom]="false" 
+            [disableDefaultUI]="false" 
+            [mapDraggable]="false" 
+            [clickableIcons]="false" 
+            [latitude]="mapData.lat" 
+            [longitude]="mapData.lng"
+            [streetViewControl]="false"
+            [zoomControl]="false"
+            mapTypeId="satellite"
+            [zoom]="6"
+>
+    <agm-marker [latitude]="mapData.lat" [longitude]="mapData.lng"></agm-marker>
+</agm-map>

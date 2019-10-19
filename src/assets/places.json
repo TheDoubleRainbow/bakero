@@ -1,0 +1,33 @@
+
+[
+	{
+		"name":"Count Dracula’s Castle",
+	 	"latitude":"45.515835", 
+	 	"longitude":"25.367540",
+	 	"photo":"places/Count_Dracula’s_Castle.jpg"
+	},
+	{
+		"name":"Grand Canyon National Park",
+		"latitude":"36.1069663",
+		"longitude":"-112.1129948",
+		"photo":"places/Grand_Canyon_National_Park.jpg"
+	},
+	{
+		"name":"Area 51",
+		"latitude":"37.233333",
+		"longitude":"-115.808333",
+		"photo":"places/Area_51.png"
+	},
+	{
+		"name":"Mount Fuji",
+		"latitude":"35.3606255",
+		"longitude":"138.7273634",
+		"photo":"places/Mount_Fuji.jpg" 
+	},
+	{
+		"name":"Uluru",
+		"latitude":"-25.3444277",
+		"longitude":"131.0368822",
+		"photo":"places/Uluru.jpg"
+	}
+]
