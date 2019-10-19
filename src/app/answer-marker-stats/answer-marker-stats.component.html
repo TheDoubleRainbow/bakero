@@ -1,1 +1,14 @@
-<p>answer-marker-stats works!</p>
+<div *ngIf="stats.display" class="stats">
+    <div class="stats__item">
+        <span>Stats in selected point:</span>
+    </div>
+    <div class="stats__item">
+        <span>Temperature:</span> <span class="stats__value">{{stats.temp}}</span>
+    </div>
+    <div class="stats__item">
+        <span>Pressure:</span> <span class="stats__value">{{stats.pressure}}</span>
+    </div>
+    <div class="stats__item">
+        <span>Humidity:</span> <span class="stats__value">{{stats.humidity}}%</span>
+    </div>
+</div>

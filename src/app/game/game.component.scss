@@ -2,6 +2,10 @@
     color: white;
     background-color: #1F1F1F;
     min-height: 100vh;
+
+    &__answer {
+        position: relative;
+    }
 }
 
 .game-container {
