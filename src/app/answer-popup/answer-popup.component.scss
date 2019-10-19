@@ -1,0 +1,13 @@
+.popup {
+    position: absolute;
+    top: calc(50% - 400px);
+    background: #1F1F1F;
+    border-radius: 5px;
+    color: white;
+    overflow: hidden;
+}
+
+.popup-wrap {
+    position: absolute;
+    z-index: 20;
+}

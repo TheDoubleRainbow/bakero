@@ -17,6 +17,7 @@ import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnswerButtonComponent } from './answer-button/answer-button.component';
 import { AnswerMarkerStatsComponent } from './answer-marker-stats/answer-marker-stats.component';
+import { AnswerPopupComponent } from './answer-popup/answer-popup.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { AnswerMarkerStatsComponent } from './answer-marker-stats/answer-marker-
     HeaderComponent,
     AnswerButtonComponent,
     AnswerMarkerStatsComponent,
+    AnswerPopupComponent,
   ],
   imports: [
     BrowserModule,
