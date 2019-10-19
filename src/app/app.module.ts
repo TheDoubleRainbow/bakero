@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnswerButtonComponent } from './answer-button/answer-button.component';
+import { AnswerMarkerStatsComponent } from './answer-marker-stats/answer-marker-stats.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { AnswerButtonComponent } from './answer-button/answer-button.component';
     QuestionStatsComponent,
     HeaderComponent,
     AnswerButtonComponent,
+    AnswerMarkerStatsComponent,
   ],
   imports: [
     BrowserModule,
