@@ -7,7 +7,7 @@
                     Surface photo
                 </div>
                 <div class="block__content">
-                    <app-question-image img="./../../assets/img/places/Mount_Fuji.jpg"></app-question-image>
+                    <app-question-image [img]="'./../../assets/img/' + round.photo"></app-question-image>
                 </div>
             </div>
             <div class="game__block block">
@@ -15,7 +15,7 @@
                     Satellite photo
                 </div>
                 <div class="block__content">
-                    <app-question-map></app-question-map>
+                    <app-question-map [mapData]="{lat: round.latitude*1, lng: round.longitude*1}"></app-question-map>
                 </div>
             </div>
             <div class="game__block block">

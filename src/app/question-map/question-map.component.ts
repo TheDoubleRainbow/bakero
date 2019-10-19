@@ -11,7 +11,6 @@ export class QuestionMapComponent implements OnInit {
 
   @Input()
   mapData = {
-    title: 'Answer map',
     lat: 51.678418,
     lng: 7.809007
   };
