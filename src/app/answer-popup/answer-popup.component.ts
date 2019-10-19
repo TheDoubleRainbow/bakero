@@ -6,8 +6,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./answer-popup.component.scss']
 })
 export class AnswerPopupComponent implements OnInit {
-  @Input()
-  show = true;
 
   @Input()
   popupData = {
@@ -25,6 +23,7 @@ export class AnswerPopupComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

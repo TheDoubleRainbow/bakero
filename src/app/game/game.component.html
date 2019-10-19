@@ -1,5 +1,5 @@
 <div class="game">
-    <app-answer-popup></app-answer-popup>
+    <app-answer-popup [popupData]="{right: stats, user: markerStats, score: score}" ></app-answer-popup>
     <app-header></app-header>
     <div class="game-container">
         <div class="game__question">
@@ -38,7 +38,7 @@
                     <app-answer-map (onMapClick)="onAnsverMapClick($event)"></app-answer-map>
                 </div>
             </div>
-            <app-answer-button [disabled]="answerDisabled"></app-answer-button>
+            <app-answer-button (click)="answer()" [disabled]="answerDisabled"></app-answer-button>
         </div>
     </div>
 </div>

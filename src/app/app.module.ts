@@ -37,7 +37,8 @@ import { AnswerPopupComponent } from './answer-popup/answer-popup.component';
     BrowserModule,
     AppRoutingModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBe1z7-kcsUos92LHb3Qfq_km1WVLFrdtE'
+      apiKey: 'AIzaSyBe1z7-kcsUos92LHb3Qfq_km1WVLFrdtE',
+      libraries: ['geometry'],
     }),
     FormsModule,
     ReactiveFormsModule,
