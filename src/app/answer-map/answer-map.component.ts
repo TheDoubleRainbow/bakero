@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnswerMapComponent implements OnInit {
 
+  public mapData = {
+    title: 'Answer map',
+    lat: 51.678418,
+    lng: 7.809007
+  };
+
   constructor() { }
 
+  initMap() {
+    
+  }
+
   ngOnInit() {
+
   }
 
 }

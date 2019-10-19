@@ -1,1 +1,21 @@
-<p>start works!</p>
+<main class="start">
+    <div class="start__login login">
+        <div class="login__header">
+            <img src="../../assets/img/logo.svg" />
+        </div>
+        <div class="login__label">
+            Sign in
+        </div>
+        <form [formGroup]="loginForm" class="login__form" (ngSubmit)="onLogin(loginForm)">
+            <div class="login__field">
+                <input class="login__input" formControlName="name" placeholder="Nickname" type="text" />
+            </div>
+            <div class="login__field">
+                <button class="login__button" type="submit">Play</button>
+            </div>
+        </form>
+        <div class="login__tip">
+            Guess the place and try to find it on the map using 3 kinds of clue
+        </div>
+    </div>
+</main>

@@ -1,0 +1,62 @@
+.start {
+    background: url('./../../assets/img/bg.png');
+    background-size: cover;
+    min-height: 100vh;
+
+    &__login {
+        background-color: #373737;
+        width: 360px;
+
+        position: absolute;
+        top: calc(50% - 200px);
+        left: calc(50% - 180px);
+
+        padding: 40px 0;
+        border-radius: 10px;
+    }
+}
+
+.login {
+    &__header {
+        text-align: center;
+        padding: 0 0 25px 0;
+    }
+
+    &__label {
+        color: white;
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 24px;
+    }
+
+    &__field {
+        text-align: center;
+    }
+
+    &__input, &__button {
+        width: 300px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+    }
+
+    &__input {
+        background-color: #ffffff;
+    }
+
+    &__button {
+        margin-top: 20px;
+        background-color: #F91010;
+        color: white;
+    }
+
+    &__tip {
+        width: 220px;
+        margin: 26px auto 0 auto;
+
+        text-align: center;
+        font-size: 14px;
+        color: #BFBFBF;
+    }
+}
