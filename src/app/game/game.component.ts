@@ -12,9 +12,10 @@ export class GameComponent implements OnInit {
   constructor(private dataService: OpenWeatherService, private gameService: GameService) { }
 
   public stats = {
-    temp: 23,
-    pressure: 10.21,
-    humidity: 20
+    // temp: 23,
+    // pressure: 10.21,
+    // humidity: 20,
+    // elevation: 1200,
   }
 
   public markerStats = {}
@@ -30,6 +31,7 @@ export class GameComponent implements OnInit {
         temp: data.main.temp,
         pressure: data.main.pressure,
         humidity: data.main.humidity,
+        elevation: data.elevation.toFixed(1),
       }
 
       this.markerSelected()
@@ -45,6 +47,7 @@ export class GameComponent implements OnInit {
         temp: data.main.temp,
         pressure: data.main.pressure,
         humidity: data.main.humidity,
+        elevation: data.elevation.toFixed(1),
       }
     })
   }
