@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { OpenWeatherService } from '../open-weather.service';
 
 @Component({
@@ -15,6 +15,9 @@ export class AnswerMapComponent implements OnInit {
     lng: 50
   };
 
+  @Output() onMapClick: EventEmitter<any> = new EventEmitter();
+  
+
   constructor(private dataService: OpenWeatherService) { }
 
   public marker = null;
@@ -23,6 +26,7 @@ export class AnswerMapComponent implements OnInit {
 
   setMarker(lat: number, lng: number) {
     this.marker = { lat, lng };
+    this.onMapClick.emit({lat, lng});
   }
 
   initMap() {
