@@ -9,6 +9,12 @@ export class GameComponent implements OnInit {
 
   constructor() { }
 
+  public stats = {
+    temp: '23',
+    pressure: '10.21',
+    humidity: '20%'
+  }
+
   ngOnInit() {
   }
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-question-stats',
@@ -8,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class QuestionStatsComponent implements OnInit {
 
   constructor() { }
+
+  @Input()
+  stats
 
   ngOnInit() {
   }

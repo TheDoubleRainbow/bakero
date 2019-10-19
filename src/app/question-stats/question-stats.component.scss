@@ -1,0 +1,13 @@
+.stats {
+    padding: 0 15px 15px 15px;
+    &__item {
+        margin-top: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__value {
+        width: 30%;
+        text-align: left;
+    }
+}
