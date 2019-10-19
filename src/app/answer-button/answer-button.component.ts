@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-answer-button',
@@ -9,7 +9,8 @@ export class AnswerButtonComponent implements OnInit {
 
   constructor() { }
   
-  public disabled = true;
+  @Input()
+  disabled = true;
 
   ngOnInit() {
   }
