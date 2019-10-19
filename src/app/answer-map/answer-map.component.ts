@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { OpenWeatherService } from '../open-weather.service';
 
 @Component({
   selector: 'app-answer-map',
@@ -14,14 +15,15 @@ export class AnswerMapComponent implements OnInit {
     lng: 50
   };
 
-  public marker = {
-    lat: 9999,
-    lng: 9999
-  }
+  constructor(private dataService: OpenWeatherService) { }
+
+  public marker = null;
 
   public zoom = 3
 
-  constructor() { }
+  setMarker(lat: number, lng: number) {
+    this.marker = { lat, lng };
+  }
 
   initMap() {
     

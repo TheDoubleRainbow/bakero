@@ -14,6 +14,8 @@ import { QuestionStatsComponent } from './question-stats/question-stats.componen
 import { FormBuilder } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OpenWeatherService } from './open-weather.service';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { HeaderComponent } from './header/header.component';
     }),
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]
