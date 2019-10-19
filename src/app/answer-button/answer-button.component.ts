@@ -9,7 +9,7 @@ export class AnswerButtonComponent implements OnInit {
 
   constructor() { }
   
-  public disabled = false;
+  public disabled = true;
 
   ngOnInit() {
   }
