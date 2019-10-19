@@ -1,7 +1,7 @@
 <div *ngIf="show" class="popup-wrap">
     <div class="popup">
         <div class="map">
-            <agm-map [latitude]="popupData.right.lat" [longitude]="popupData.right.lng" mapTypeId="hybrid" [zoom]="2">
+            <agm-map [latitude]="popupData.right.lat" [longitude]="popupData.right.lng" mapTypeId="hybrid" [zoom]="4">
                 <agm-marker [latitude]="popupData.right.lat" [longitude]="popupData.right.lng"></agm-marker>
                 <agm-marker [latitude]="popupData.user.lat" [longitude]="popupData.user.lng"></agm-marker>
             </agm-map>
