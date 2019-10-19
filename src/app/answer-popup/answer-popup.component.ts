@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-answer-popup',
@@ -18,6 +18,12 @@ export class AnswerPopupComponent implements OnInit {
       lng: 30,
     },
     score: 0
+  }
+
+  @Output() onNextLevel: EventEmitter<any> = new EventEmitter(); 
+
+  nextLevel() {
+    this.onNextLevel.emit();
   }
 
   constructor() { }

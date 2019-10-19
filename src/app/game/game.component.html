@@ -1,5 +1,5 @@
 <div class="game">
-    <app-answer-popup [popupData]="{right: stats, user: markerStats, score: score}" ></app-answer-popup>
+    <app-answer-popup *ngIf="showAnswerModal" (onNextLevel)="onNextRound()" [popupData]="{right: {lat: round.latitude*1, lng: round.longitude*1}, user: userPoint, score: score}" ></app-answer-popup>
     <app-header></app-header>
     <div class="game-container">
         <div class="game__question">
