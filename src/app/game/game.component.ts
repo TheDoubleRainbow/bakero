@@ -11,14 +11,20 @@ export class GameComponent implements OnInit {
   constructor(private dataService: OpenWeatherService) { }
 
   public stats = {
-    temp: '23',
-    pressure: '10.21',
-    humidity: '20%'
+    temp: 23,
+    pressure: 10.21,
+    humidity: 20
   }
+
+  public markerStats = {}
 
   onAnsverMapClick(point: {lng: number, lat: number}) {
     this.dataService.getDataByGeopoint(point.lng, point.lat).subscribe( data => {
-      
+      this.markerStats = {
+        temp: data.main.temp,
+        pressure: data.main.pressure,
+        humidity: data.main.humidity,
+      }
     })
   }
 
