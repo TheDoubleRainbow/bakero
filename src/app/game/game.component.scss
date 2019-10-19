@@ -9,14 +9,15 @@
     margin: auto;
     padding: 40px 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .block {
     &__content {
-        min-width: 300px;
+        min-width: 350px;
         background-color: #373737;
         border-radius: 5px;
         margin: 10px 0 15px 0;
+        overflow: hidden;
     }
 }
