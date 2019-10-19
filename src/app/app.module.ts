@@ -15,7 +15,7 @@ import { FormBuilder } from '@angular/forms';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
 import { HttpClientModule } from '@angular/common/http';
-import { OpenWeatherService } from './open-weather.service';
+import { AnswerButtonComponent } from './answer-button/answer-button.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { OpenWeatherService } from './open-weather.service';
     QuestionImageComponent,
     QuestionStatsComponent,
     HeaderComponent,
+    AnswerButtonComponent,
   ],
   imports: [
     BrowserModule,
