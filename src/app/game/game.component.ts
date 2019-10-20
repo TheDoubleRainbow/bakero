@@ -98,6 +98,7 @@ export class GameComponent implements OnInit {
       console.log('end')
     }
     this.round = this.gameService.getCurrenctRound();
+    this.getStats(this.round.latitude, this.round.longitude);
     this.showAnswerModal = false;
     this.totalScore = this.gameService.getScore();
     this.userPoint = {};
