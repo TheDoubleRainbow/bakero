@@ -26,16 +26,14 @@ app.get("/api/data", (req, res) => {
   const elevationDataPromise = fetch(`https://maps.googleapis.com/maps/api/elevation/json?locations=${lat || 0},${lng || 0}&key=${googleKey}`).then(res => res.json());
 
   Promise.all([weatherDataPromise, elevationDataPromise]).then( data => {
-    // console.log(data);
     res.json({
       temp: data[0].main.temp,
-      pressure: data[0].pressure,
-      humidity: data[0].humidity,
+      pressure: data[0].main.pressure,
+      humidity: data[0].main.humidity,
       elevation: data[1].results[0].elevation,
     })
 
   })
-    // .then(json => console.log(json));
 }) 
 
 app.get('*', (req, res) => {
