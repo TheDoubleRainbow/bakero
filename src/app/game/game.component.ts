@@ -77,6 +77,7 @@ export class GameComponent implements OnInit {
 
   answer(){
     this.showAnswerModal = true;
+    this.answerDisabled = true;
     this.mapsAPILoader.load().then(() => {
       document.documentElement.scrollTop = 0;
       const rightPoint = new google.maps.LatLng(Number(this.round.latitude), Number(this.round.longitude));
