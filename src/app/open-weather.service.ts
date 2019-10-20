@@ -44,6 +44,13 @@ interface WeatherData {
   elevation: number,
 }
 
+interface Data {
+  temp: number,
+  pressure: number,
+  humidity: number,
+  elevation: number,
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -55,18 +62,19 @@ export class OpenWeatherService {
   googleKey = "AIzaSyBe1z7-kcsUos92LHb3Qfq_km1WVLFrdtE";
 
   getDataByGeopoint(lng: number, lat: number) {
-    let date = new Date();
-    return combineLatest(
-      // this.http.get(`http://api.openweathermap.org/pollution/v1/o3/${lat},${lng}/2019Z.json?appid=${this.appId}`),
-      this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${this.appId}`),
-      this.http.get(`https://maps.googleapis.com/maps/api/elevation/json?locations=${lat},${lng}&key=${this.googleKey}`),
-    ).pipe(
-      map(data => {
-        // console.log(data);
-        return { ...data[0], elevation: data[1]['results'][0].elevation };
-      }
-      )) as Observable<WeatherData>;
+    // let date = new Date();
+    // return combineLatest(
+    //   // this.http.get(`http://api.openweathermap.org/pollution/v1/o3/${lat},${lng}/2019Z.json?appid=${this.appId}`),
+    //   this.http.get(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${this.appId}`),
+    //   this.http.get(`https://maps.googleapis.com/maps/api/elevation/json?locations=${lat},${lng}&key=${this.googleKey}`),
+    // ).pipe(
+    //   map(data => {
+    //     // console.log(data);
+    //     return { ...data[0], elevation: data[1]['results'][0].elevation };
+    //   }
+    //   )) as Observable<WeatherData>;
 
-    // this.http.get("https://maps.googleapis.com/maps/api/elevation/json?locations=${lat},&key=${this.googleKey}");
+    // // this.http.get("https://maps.googleapis.com/maps/api/elevation/json?locations=${lat},&key=${this.googleKey}");
+    return this.http.get(`https://bakero.herokuapp.com/api/data?lng=${lng}&lat=${lat}`) as Observable<Data>;
   }
 }
