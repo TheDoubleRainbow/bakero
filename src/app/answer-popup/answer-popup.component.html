@@ -2,8 +2,12 @@
   <div class="popup">
     <div class="map">
       <agm-map [latitude]="popupData.right.lat" [longitude]="popupData.right.lng" mapTypeId="hybrid" [zoom]="4">
-        <agm-marker [latitude]="popupData.right.lat" [longitude]="popupData.right.lng"></agm-marker>
-        <agm-marker [latitude]="popupData.user.lat" [longitude]="popupData.user.lng"></agm-marker>
+        <agm-marker [latitude]="popupData.right.lat" [longitude]="popupData.right.lng" title="Right"></agm-marker>
+        <agm-marker [latitude]="popupData.user.lat" [longitude]="popupData.user.lng" title="Your"></agm-marker>
+        <agm-polyline strokeColor="red">
+          <agm-polyline-point [latitude]="popupData.right.lat" [longitude]="popupData.right.lng"> </agm-polyline-point>
+          <agm-polyline-point [latitude]="popupData.user.lat" [longitude]="popupData.user.lng"> </agm-polyline-point>
+        </agm-polyline>
       </agm-map>
     </div>
     <div *ngIf="!end" class="score">
