@@ -78,8 +78,7 @@ export class GameComponent implements OnInit {
   answer(){
     this.showAnswerModal = true;
     this.mapsAPILoader.load().then(() => {
-      console.log(Number(this.round.latitude), Number(this.round.longitude));
-      console.log(this.userPoint.lat, this.userPoint.lng);
+      document.documentElement.scrollTop = 0;
       const rightPoint = new google.maps.LatLng(Number(this.round.latitude), Number(this.round.longitude));
       const userPoint = new google.maps.LatLng(this.userPoint.lat, this.userPoint.lng);
       this.distance = google.maps.geometry.spherical.computeDistanceBetween(rightPoint, userPoint);
@@ -101,6 +100,7 @@ export class GameComponent implements OnInit {
     this.showAnswerModal = false;
     this.totalScore = this.gameService.getScore();
     this.userPoint = {};
+    this.markerStats = {};
   }
 
   onNewGame() {
@@ -110,6 +110,7 @@ export class GameComponent implements OnInit {
     this.round = this.gameService.getCurrenctRound();
     this.getStats(this.round.latitude, this.round.longitude);
     this.totalScore = this.gameService.getScore();
+    this.markerStats = {};
   }
 
   ngOnInit() {

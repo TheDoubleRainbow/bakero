@@ -8,6 +8,11 @@
     color: white;
     overflow: hidden;
     box-shadow: 0px 0px 50px #333;
+
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        left: 0;
+    }
 }
 
 .score {

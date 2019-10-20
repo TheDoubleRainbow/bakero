@@ -11,9 +11,14 @@
 .game-container {
     max-width: 1170px;
     margin: auto;
-    padding: 40px 0;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1190px) {
+        padding: 20px 40px;
+        flex-direction: column;
+    }
 }
 
 .block {
