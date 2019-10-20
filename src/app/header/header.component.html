@@ -1,15 +1,18 @@
 <div class="header">
-    <div class="header-container">
-        <div class="header__logo-wrap">
-            <img class="header__logo" src="./../../assets/img/logo.svg">
-        </div>
-        <div class="header__user-data">
-            <div class="header__score-wrap">
-                <span class="header__score-label">Your score:</span> <span> {{totalScore}}</span>
-            </div>
-            <div class="header__user">
-                <span>{{user.name}}</span>
-            </div>
-        </div>
+  <div class="header-container">
+    <div class="header__logo-wrap">
+      <img class="header__logo" src="./../../assets/img/logo.svg">
     </div>
+    <div class="header__user-data">
+      <div class="header__score-wrap">
+        <span class="header__score-label">Round:</span> <span> {{currentRondNumber}}/{{roundsTotalNumber}}</span>
+      </div>
+      <div class="header__score-wrap">
+        <span class="header__score-label">Your score:</span> <span> {{totalScore}}</span>
+      </div>
+      <div class="header__user">
+        <span>{{user?.name}}</span>
+      </div>
+    </div>
+  </div>
 </div>

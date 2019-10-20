@@ -13,6 +13,8 @@ export class GameService {
     name: 'Username',
   }
 
+  private roundsCount = questions.length;
+
   private roundNum = 3;
 
   private rounds = [];
@@ -62,6 +64,14 @@ export class GameService {
 
   nextRound(){
     this.round++;
+  }
+
+  getCurrentRondNumber() {
+    return this.round + 1;
+  }
+
+  getRoundsTotalNumber() {
+    return this.rounds.length;
   }
 
   checkEnd() {

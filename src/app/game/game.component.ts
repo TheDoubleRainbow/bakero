@@ -77,6 +77,7 @@ export class GameComponent implements OnInit {
 
   answer(){
     this.showAnswerModal = true;
+    this.answerDisabled = true;
     this.mapsAPILoader.load().then(() => {
       console.log(Number(this.round.latitude), Number(this.round.longitude));
       console.log(this.userPoint.lat, this.userPoint.lng);

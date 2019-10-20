@@ -19,6 +19,14 @@ export class HeaderComponent implements OnInit {
     this.user = this.gameService.getUser();
   }
 
+  get roundsTotalNumber() {
+    return this.gameService.getRoundsTotalNumber();
+  }
+
+  get currentRondNumber() {
+    return this.gameService.getCurrentRondNumber()
+  }
+
   ngOnInit() {
     this.getUser();
   }
