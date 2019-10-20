@@ -16,7 +16,7 @@
     justify-content: space-between;
 
     @media screen and (max-width: 1190px) {
-        padding: 20px 40px;
+        padding: 20px 5px;
         flex-direction: column;
     }
 }
@@ -28,5 +28,9 @@
         border-radius: 5px;
         margin: 10px 0 15px 0;
         overflow: hidden;
+
+        @media screen and (max-width: 400px) {
+            min-width: 200px;
+        }
     }
 }
