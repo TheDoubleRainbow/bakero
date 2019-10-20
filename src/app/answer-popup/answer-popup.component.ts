@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { GameService } from '../game.service';
 
 @Component({
   selector: 'app-answer-popup',
@@ -20,16 +21,30 @@ export class AnswerPopupComponent implements OnInit {
     score: 0
   }
 
+  @Input()
+  end = false;
+
+  @Input()
+  totalScore;
+
   @Output() onNextLevel: EventEmitter<any> = new EventEmitter(); 
+
+  @Output() onNewGame: EventEmitter<any> = new EventEmitter(); 
+
+  public username = 'Username'
 
   nextLevel() {
     this.onNextLevel.emit();
   }
 
-  constructor() { }
+  newGame() {
+    this.onNewGame.emit();
+  }
+
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {
-
+    this.username = this.gameService.getUser().name;
   }
 
 }

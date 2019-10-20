@@ -1,6 +1,6 @@
 <div class="game">
-    <app-answer-popup *ngIf="showAnswerModal" (onNextLevel)="onNextRound()" [popupData]="{right: {lat: round.latitude*1, lng: round.longitude*1}, user: userPoint, score: score}" ></app-answer-popup>
-    <app-header></app-header>
+    <app-answer-popup *ngIf="showAnswerModal" (onNewGame)="onNewGame()" (onNextLevel)="onNextRound()" [end] = "gameEnd" [popupData]="{right: {lat: round.latitude*1, lng: round.longitude*1}, user: userPoint, score: score}" [totalScore] = "totalScore" ></app-answer-popup>
+    <app-header [totalScore] = "totalScore"></app-header>
     <div class="game-container">
         <div class="game__question">
             <div class="game__block block">
@@ -35,7 +35,7 @@
                     Map to answer
                 </div>
                 <div class="block__content">
-                    <app-answer-map (onMapClick)="onAnsverMapClick($event)"></app-answer-map>
+                    <app-answer-map [marker]="userPoint" (onMapClick)="onAnsverMapClick($event)"></app-answer-map>
                 </div>
             </div>
             <app-answer-button (click)="answer()" [disabled]="answerDisabled"></app-answer-button>

@@ -19,13 +19,30 @@ export class GameService {
   private round = 0;
   public gameStarted = false;
 
+  private score = 0;
+
   getUser() {
-    console.log(questions);
+    if(this.user.name == 'Username' && localStorage.name) {
+      this.setUserName(localStorage.name);
+    }
     return this.user;
   }
 
   setUserName(name: string) {
     this.user.name = name;
+    localStorage.name = name;
+  }
+
+  getScore() {
+    return this.score;
+  }
+
+  addScore(value) {
+    this.score += value*1;
+  }
+
+  nullScore() {
+    this.score = 0;
   }
 
   makeRounds() {
@@ -47,9 +64,20 @@ export class GameService {
     this.round++;
   }
 
+  checkEnd() {
+    console.log('round' + this.round, 'rounds: ' + this.roundNum)
+    if(!(this.round < this.roundNum - 1)) {
+      return true;
+    }
+  }
+
   startGame() {
+    this.roundNum = 3;
+    this.rounds = [];
+    this.round = 0;
     this.router.navigate(['./','game']);
     this.makeRounds();
+    this.nullScore();
     this.gameStarted = true;
   }
 }

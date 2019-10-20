@@ -6,12 +6,18 @@
         <agm-marker [latitude]="popupData.user.lat" [longitude]="popupData.user.lng"></agm-marker>
       </agm-map>
     </div>
-    <div class="score">
-      <span class="score-text">Your score is</span> {{popupData.score}}
+    <div *ngIf="!end" class="score">
+      <span class="score-text">{{username}}, your score is</span> {{popupData.score}}
+    </div>
+    <div *ngIf="end" class="score">
+      <span class="score-text">{{username}}, your final score is</span> {{totalScore}}
     </div>
     <div class="controls">
-      <button (click)="nextLevel()" class="next-round-btn">
+      <button *ngIf="!end" (click)="nextLevel()" class="next-round-btn">
         Next round
+      </button>
+      <button *ngIf="end" (click)="newGame()" class="next-round-btn">
+        Play new game
       </button>
     </div>
   </div>
