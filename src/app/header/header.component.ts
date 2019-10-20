@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GameService } from '../game.service';
 
 @Component({
@@ -11,6 +11,9 @@ export class HeaderComponent implements OnInit {
   constructor(private gameService: GameService) { }
 
   public user = {}
+
+  @Input()
+  totalScore;
 
   getUser(){
     this.user = this.gameService.getUser();

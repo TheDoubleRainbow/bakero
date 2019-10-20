@@ -16,21 +16,18 @@ export class AnswerMapComponent implements OnInit {
   };
 
   @Output() onMapClick: EventEmitter<any> = new EventEmitter();
+
+  @Input()
+  marker = null;
   
 
   constructor(private dataService: OpenWeatherService) { }
-
-  public marker = null;
 
   public zoom = 3
 
   setMarker(lat: number, lng: number) {
     this.marker = { lat, lng };
     this.onMapClick.emit({lat, lng});
-  }
-
-  initMap() {
-    
   }
 
   ngOnInit() {
