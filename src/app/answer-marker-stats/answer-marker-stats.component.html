@@ -3,15 +3,15 @@
     <span>Stats in selected point:</span>
   </div>
   <div class="stats__item">
-    <span>Temperature:</span> <span class="stats__value">{{stats.temp}}</span>
+    <span>Temperature:</span> <span class="stats__value">{{(stats.temp*1 - 273.15).toFixed(1)}} &#176;C</span>
   </div>
   <div class="stats__item">
-    <span>Pressure:</span> <span class="stats__value">{{stats.pressure}}</span>
+    <span>Pressure:</span> <span class="stats__value">{{stats.pressure}} hPa</span>
   </div>
   <div class="stats__item">
-    <span>Humidity:</span> <span class="stats__value">{{stats.humidity}}%</span>
+    <span>Humidity:</span> <span class="stats__value">{{stats.humidity}} %</span>
   </div>
   <div class="stats__item">
-    <span>Elevation:</span> <span class="stats__value">{{stats.elevation}}m</span>
+    <span>Elevation:</span> <span class="stats__value">{{stats.elevation}} m</span>
   </div>
 </div>

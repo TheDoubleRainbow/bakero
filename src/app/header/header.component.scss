@@ -14,10 +14,16 @@
         padding-top: 17px;
         display: flex;
         justify-content: space-around;
+        @media screen and (max-width: 1190px) {
+            padding-top: 20px;
+        }
     }
 
     &__score-wrap {
         margin: 0 50px;
+        @media screen and (max-width: 1190px) {
+            margin: 0 15px;
+        }
     }
 
     &__score-label {
