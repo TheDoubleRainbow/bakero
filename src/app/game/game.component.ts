@@ -41,9 +41,9 @@ export class GameComponent implements OnInit {
     this.dataService.getDataByGeopoint(point.lng, point.lat).subscribe( data => {
       this.markerStats = {
         display: true,
-        temp: data.main.temp,
-        pressure: data.main.pressure,
-        humidity: data.main.humidity,
+        temp: data.temp,
+        pressure: data.pressure,
+        humidity: data.humidity,
         elevation: data.elevation.toFixed(1),
       }
 
